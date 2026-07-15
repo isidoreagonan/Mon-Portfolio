@@ -74,7 +74,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "AGONAN ISIDORE ABRAHAM — IA, Automatisation & Business Digital" },
-      { name: "description", content: "Portfolio d'AGONAN ISIDORE ABRAHAM, fondateur de Dolapo ECOM LLC. IA, automatisation, SaaS et vidéos UGC qui convertissent." },
+      { name: "description", content: "Portfolio d'AGONAN ISIDORE ABRAHAM. IA, automatisation, SaaS et vidéos UGC qui convertissent." },
       { name: "author", content: "AGONAN ISIDORE ABRAHAM" },
       { property: "og:title", content: "AGONAN ISIDORE ABRAHAM — IA & Business Digital" },
       { property: "og:description", content: "IA, automatisation, SaaS et vidéos UGC qui convertissent." },

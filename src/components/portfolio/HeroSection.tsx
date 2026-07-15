@@ -21,7 +21,7 @@ export default function HeroSection() {
   const stats = [
     { value: '2.5M+', label: 'Vues UGC', desc: 'Contenu viral & hooks', icon: TrendingUp, color: 'text-brand-emerald' },
     { value: '2 SaaS', label: 'Plateformes', desc: 'Technova & Dukaio', icon: Cpu, color: 'text-brand-cyan' },
-    { value: 'LLC', label: 'Dolapo ECOM', desc: 'Structure offshore', icon: Award, color: 'text-purple-400' },
+    { value: 'CEO', label: 'Fondateur', desc: 'SaaS & E-commerce', icon: Award, color: 'text-purple-400' },
     { value: '100%', label: 'Automatisation', desc: 'Processus & SEO', icon: Bot, color: 'text-amber-400' },
   ];
 
@@ -42,7 +42,7 @@ export default function HeroSection() {
         <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-none bg-brand-emerald/10 border border-brand-emerald/20 mb-8 animate-pulse">
           <Sparkles className="w-4 h-4 text-brand-emerald" />
           <span className="text-xs font-mono font-medium tracking-widest text-brand-emerald uppercase">
-            // DOLAPO ECOM LLC // SYSTEM_INIT_2026
+            // AGONAN ISIDORE ABRAHAM // SYSTEM_INIT_2026
           </span>
         </div>
 
@@ -103,7 +103,7 @@ export default function HeroSection() {
               <div className="relative overflow-hidden bg-neutral-900 border border-neutral-800">
                 <img
                   src="/images/isidore.png"
-                  alt="Agonan Isidore Abraham — Fondateur Dolapo ECOM LLC"
+                  alt="Agonan Isidore Abraham"
                   className="w-full h-auto object-cover transition-all duration-700 hover:scale-105"
                   loading="eager"
                 />

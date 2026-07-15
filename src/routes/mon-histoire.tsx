@@ -11,13 +11,13 @@ export const Route = createFileRoute("/mon-histoire")({
       {
         name: "description",
         content:
-          "Du CAP national aux SaaS africains : l'histoire d'Agonan Isidore Abraham, fondateur de Dolapo ECOM LLC, entre technique, IA et business digital.",
+          "Du CAP national aux SaaS africains : l'histoire d'Agonan Isidore Abraham, entre technique, IA et business digital.",
       },
       { property: "og:title", content: "Mon Histoire — Agonan Isidore Abraham" },
       {
         property: "og:description",
         content:
-          "Le parcours du technicien devenu entrepreneur : CAP 4ᵉ national, BAC F3, DT, puis Dolapo ECOM LLC, Technova & Dukaio.",
+          "Le parcours du technicien devenu entrepreneur : CAP 4ᵉ national, BAC F3, DT, puis Technova & Dukaio.",
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -106,16 +106,16 @@ const CHAPTERS: Chapter[] = [
   },
   {
     n: "06",
-    kicker: "LA STRUCTURE — DOLAPO ECOM LLC",
-    titleWhite: "Une entreprise offshore",
-    titleAccent: "pour porter les ambitions.",
+    kicker: "L'ENTREPRENEURIAT",
+    titleWhite: "Une vision globale",
+    titleAccent: "et structurée.",
     paragraphs: [
-      "Pour tenir la vitesse à laquelle les projets sortaient, il me fallait une structure sérieuse. J'ai fondé Dolapo ECOM LLC — une entité offshore pensée pour l'e-commerce international, les SaaS et les partenariats globaux.",
-      "Sous ce toit sont nés deux moteurs : Technova Learning, plateforme d'e-learning pour transmettre ce que j'ai appris, et Dukaio, système de monétisation pour transformer une audience en revenu prévisible.",
+      "Pour tenir la vitesse à laquelle les projets sortaient, il me fallait une structure sérieuse. J'ai fondé ma propre entreprise pensée pour l'e-commerce international, les SaaS et les partenariats globaux.",
+      "C'est ce qui m'a permis de lancer Technova Learning (E-learning) et Dukaio (Outil SaaS de gestion de contenu social) tout en développant l'Automation YouTube à grande échelle.",
     ],
     quote:
       "« Je ne voulais pas un job. Je voulais une machine capable d'en créer plusieurs. »",
-    tags: ["Dolapo ECOM LLC", "Technova Learning", "Dukaio", "SaaS"],
+    tags: ["Entrepreneuriat", "Technova Learning", "Dukaio", "SaaS"],
   },
   {
     n: "07",
@@ -301,7 +301,7 @@ function MonHistoirePage() {
             </span>
           </h2>
           <p className="mt-6 text-sm sm:text-base text-neutral-400 font-light leading-relaxed max-w-xl mx-auto">
-            Si un technicien parti d'un CAP a pu bâtir une structure offshore,
+            Si un technicien parti d'un CAP a pu bâtir une telle expertise,
             deux SaaS et un système IA — avec de la méthode et de l'internet —
             toi aussi, tu peux.
           </p>

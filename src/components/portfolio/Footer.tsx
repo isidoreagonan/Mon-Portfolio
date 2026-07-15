@@ -11,12 +11,12 @@ export default function Footer() {
           {/* Company structure and location */}
           <div className="flex items-center space-x-3">
             <Globe className="w-4 h-4 text-brand-emerald" />
-            <span>Dolapo ECOM LLC — Société Offshore Enregistrée</span>
+            <span>Agonan Isidore Abraham</span>
           </div>
 
           {/* Copyright details */}
           <div className="text-center md:text-right">
-            <span>© 2026 Dolapo ECOM LLC. Tous droits réservés.</span>
+            <span>© 2026 Agonan Isidore Abraham. Tous droits réservés.</span>
           </div>
         </div>
       </div>

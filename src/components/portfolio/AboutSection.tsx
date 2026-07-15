@@ -9,13 +9,13 @@ export default function AboutSection() {
     { category: 'Langages de Code', items: ['Python', 'C++', 'JavaScript', 'TypeScript', 'SQL'] },
     { category: 'Intelligence Artificielle', items: ['Gemini API', 'Claude AI', 'ChatGPT API', 'Outils No-Code & Agents'] },
     { category: 'Édition & Création', items: ['CapCut Pro', 'Adobe After Effects', 'Adobe Photoshop', 'Sound Design'] },
-    { category: 'Business & Automation', items: ['YouTube Automation', 'SEO Poussé', 'E-commerce', 'Dolapo ECOM LLC'] },
+    { category: 'Business & Automation', items: ['YouTube Automation', 'SEO Poussé', 'E-commerce', 'SaaS Africain'] },
   ];
 
   const credentialData = [
     { label: 'Diplôme', value: 'Diplôme de Technicien (DT)' },
     { label: 'Scolarité', value: 'Baccalauréat Scientifique & Technologique' },
-    { label: 'Entreprise Offshore', value: 'Dolapo ECOM LLC (Fondateur)' },
+    { label: 'Entreprise', value: 'Créateur & Fondateur' },
     { label: 'Projets Majeurs', value: 'Technova Learning, Dukaio' },
   ];
 
@@ -59,7 +59,7 @@ export default function AboutSection() {
                 </div>
                 <div className="flex items-center space-x-1 text-zinc-500 font-mono text-[10px]">
                   <Terminal className="w-3 h-3 text-brand-emerald" />
-                  <span>isidore@dolapo-offshore:~</span>
+                  <span className="text-brand-emerald">isidore@admin:~$</span>
                 </div>
                 <div className="w-8" />
               </div>
@@ -111,7 +111,7 @@ export default function AboutSection() {
                       <span>✓</span> [SYSTEM] Baccalauréat &amp; Diplôme de Technicien loaded
                     </p>
                     <p className="text-purple-400 flex items-center gap-1">
-                      <span>✓</span> [BUSINESS] Dolapo ECOM LLC offshore structure created
+                      <span>✓</span> [BUSINESS] Global infrastructure created
                     </p>
                     <p className="text-zinc-300 flex items-center gap-1">
                       <span>✓</span> [SAAS] Technova Learning (E-Learning Engine) — ACTIVE

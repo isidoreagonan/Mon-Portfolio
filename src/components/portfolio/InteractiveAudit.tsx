@@ -50,7 +50,7 @@ export default function InteractiveAudit() {
         timeframe = '30 jours';
         if (painpoint === 'skills') {
           title = 'Plan d\'Infiltration IA & Compétences Clés';
-          strategy = 'Votre priorité absolue est d\'acquérir rapidement les bases des invites (prompt engineering) et de comprendre l\'écosystème IA pour devenir indispensable sur le marché freelance ou l\'offshore.';
+          strategy = 'Votre priorité absolue est d\'acquérir rapidement les bases des invites (prompt engineering) et de comprendre l\'écosystème IA pour devenir indispensable sur le marché freelance ou à l\'international.';
           actions = [
             'Suivre un cursus accéléré d\'automatisation sur Technova Learning.',
             'Maîtriser les bases du Prompt Engineering avec ChatGPT & Claude.',

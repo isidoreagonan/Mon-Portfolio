@@ -198,7 +198,7 @@ export default function ProjectsSection() {
                     <div className="flex-1 space-y-1.5 overflow-hidden text-zinc-400">
                       <div className="text-zinc-600">&gt; initialising niche database...</div>
                       <div className="text-brand-cyan">&gt; API connection status: 200 OK</div>
-                      <div className="text-brand-emerald">&gt; [MODEL] AI script text generated: "Le secret de l'offshore..."</div>
+                      <div className="text-brand-emerald">&gt; [MODEL] AI script text generated: "Le secret du business digital..."</div>
                       <div className="text-zinc-400">&gt; [CAPCUT] rendering video compilation automatically...</div>
                       <div className="text-purple-400 animate-pulse">&gt; UPLOADING TO SCHEDULER: 100% complete</div>
                     </div>

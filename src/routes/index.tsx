@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio d'AGONAN ISIDORE ABRAHAM, fondateur de Dolapo ECOM LLC. IA, automatisation, SaaS et vidéos UGC qui convertissent.",
+          "Portfolio d'AGONAN ISIDORE ABRAHAM. IA, automatisation, SaaS et vidéos UGC qui convertissent.",
       },
       { property: "og:title", content: "AGONAN ISIDORE ABRAHAM — IA & Business Digital" },
       { property: "og:description", content: "IA, automatisation, SaaS et vidéos UGC qui convertissent." },
