@@ -3,7 +3,7 @@ import Navbar from "@/components/portfolio/Navbar";
 import HeroSection from "@/components/portfolio/HeroSection";
 import ServicesSection from "@/components/portfolio/ServicesSection";
 import ProjectsSection from "@/components/portfolio/ProjectsSection";
-
+import Footer from "@/components/portfolio/Footer";
 import InteractiveAudit from "@/components/portfolio/InteractiveAudit";
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,6 +38,7 @@ function HomePage() {
         
         <InteractiveAudit />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Navbar from "@/components/portfolio/Navbar";
+import Footer from "@/components/portfolio/Footer";
 import { Youtube, Linkedin, Facebook } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
@@ -169,10 +170,7 @@ function ContactPage() {
           </div>
         </div>
       </main>
-      
-      <footer className="border-t border-white/10 py-6 text-center text-zinc-500 text-xs font-mono">
-        <p>2024 — Tous droits réservés • Agonan Isidore Abraham</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
