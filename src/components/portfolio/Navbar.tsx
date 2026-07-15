@@ -226,7 +226,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <div
         id="mobile-nav-drawer"
-        className={`fixed inset-y-0 right-0 w-full max-w-sm bg-[#030303]/95 backdrop-blur-2xl border-l border-white/10 z-50 p-8 flex flex-col justify-between transform transition-transform duration-500 lg:hidden rounded-none ${
+        className={`fixed inset-y-0 right-0 w-full max-w-sm bg-black border-l border-white/10 z-50 p-8 flex flex-col justify-between transform transition-transform duration-500 lg:hidden rounded-none shadow-2xl ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
