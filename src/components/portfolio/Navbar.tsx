@@ -102,6 +102,7 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <nav
       id="main-navbar"
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ease-in-out pointer-events-auto glassmorphism ${
@@ -222,11 +223,13 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+    </nav>
 
       {/* Mobile Drawer */}
       <div
         id="mobile-nav-drawer"
-        className={`fixed inset-y-0 right-0 w-full max-w-sm bg-black border-l border-white/10 z-50 p-8 flex flex-col justify-between transform transition-transform duration-500 lg:hidden rounded-none shadow-2xl ${
+        style={{ backgroundColor: '#050505', opacity: 1 }}
+        className={`fixed inset-y-0 right-0 w-full max-w-sm border-l border-white/10 z-[120] p-8 flex flex-col justify-between transform transition-transform duration-500 lg:hidden rounded-none shadow-2xl ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -326,10 +329,10 @@ export default function Navbar() {
         <div
           id="mobile-nav-backdrop"
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] lg:hidden"
         />
       )}
-    </nav>
+    </>
   );
 }
 
