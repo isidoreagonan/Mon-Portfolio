@@ -104,13 +104,13 @@ export default function Navbar() {
     <>
     <nav
       id="main-navbar"
-      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ease-in-out pointer-events-auto glassmorphism ${
+      className={`fixed top-0 left-0 right-0 w-full z-[9999] transition-all duration-300 ease-in-out pointer-events-auto ${
         scrolled
-          ? 'py-3 shadow-2xl shadow-brand-emerald/10 border-b border-brand-emerald/40 backdrop-blur-2xl'
-          : 'py-5 shadow-lg shadow-black/60 border-b border-white/10'
+          ? 'py-3 bg-[#030303]/90 shadow-2xl shadow-brand-emerald/10 border-b border-brand-emerald/30 backdrop-blur-2xl'
+          : 'py-4 sm:py-5 bg-[#030303]/60 shadow-lg shadow-black/50 border-b border-white/10 backdrop-blur-xl'
       }`}
     >
-      <div className="w-full px-4 sm:px-8 lg:px-12 flex items-center justify-between">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
         {/* Logo - Complètement à gauche et clique = recharge le site */}
         <a
           id="nav-logo"
