@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Navbar from "@/components/portfolio/Navbar";
 import HeroSection from "@/components/portfolio/HeroSection";
+import VisionSection from "@/components/portfolio/VisionSection";
 import SocialProof from "@/components/portfolio/SocialProof";
 import ServicesSection from "@/components/portfolio/ServicesSection";
 import ProjectsSection from "@/components/portfolio/ProjectsSection";
@@ -34,6 +35,7 @@ function HomePage() {
       <Navbar />
       <main id="main-content">
         <HeroSection />
+        <VisionSection />
         <SocialProof />
         <ServicesSection />
         <ProjectsSection />
