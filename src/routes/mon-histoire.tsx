@@ -322,7 +322,9 @@ function MonHistoirePage() {
               Voir les services
             </Link>
           </div>
-          <footer className="border-t border-white/10 py-6 text-center text-zinc-500 text-xs font-mono mt-12">
+        </section>
+        
+        <footer className="border-t border-white/10 py-6 text-center text-zinc-500 text-xs font-mono mt-12">
           <p>2024 — Tous droits réservés • Agonan Isidore Abraham</p>
         </footer>
       </main>
