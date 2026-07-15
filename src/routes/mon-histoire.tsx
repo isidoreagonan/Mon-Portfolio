@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import Navbar from "@/components/portfolio/Navbar";
-import ContactSection from "@/components/portfolio/ContactSection";
 import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/mon-histoire")({
@@ -323,12 +322,10 @@ function MonHistoirePage() {
               Voir les services
             </Link>
           </div>
-        </section>
+          <footer className="border-t border-white/10 py-6 text-center text-zinc-500 text-xs font-mono mt-12">
+          <p>2024 — Tous droits réservés • Agonan Isidore Abraham</p>
+        </footer>
       </main>
-
-      <div className="mt-32">
-        <ContactSection />
-      </div>
     </div>
   );
 }

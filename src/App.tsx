@@ -23,8 +23,7 @@ export default function App() {
         <InteractiveAudit />
       </main>
 
-      {/* Footer & Call To Action */}
-      <ContactSection />
+      </main>
     </div>
   );
 }

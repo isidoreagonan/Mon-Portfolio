@@ -24,7 +24,6 @@ export default function Navbar() {
     { id: 'projets', name: 'Réalisations', kind: 'anchor' },
     { id: 'mon-histoire', name: 'Mon Histoire', kind: 'route', to: '/mon-histoire' },
     { id: 'audit', name: 'Votre Stratégie', kind: 'anchor' },
-    { id: 'contact', name: 'Contact', kind: 'anchor' },
   ];
 
   useEffect(() => {
@@ -190,28 +189,15 @@ export default function Navbar() {
 
         {/* Bouton COLLABORER + Hamburger - Complètement à droite */}
         <div className="flex items-center space-x-4 shrink-0">
-          {isHome ? (
-            <a
-              id="nav-cta-btn"
-              href="#contact"
-              onClick={(e) => handleScrollTo(e, 'contact')}
-              className="hidden lg:flex items-center space-x-2 px-6 py-2.5 rounded-none text-xs font-mono uppercase tracking-widest bg-transparent border border-brand-emerald text-brand-emerald hover:bg-brand-emerald hover:text-black transition-all duration-300 group shadow-[0_0_15px_rgba(16,185,129,0.15)] hover:shadow-[0_0_25px_rgba(16,185,129,0.4)]"
-            >
-              <span>Collaborer</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </a>
-          ) : (
-            <Link
-              id="nav-cta-btn"
-              to="/"
-              hash="contact"
-              onClick={() => setIsOpen(false)}
-              className="hidden lg:flex items-center space-x-2 px-6 py-2.5 rounded-none text-xs font-mono uppercase tracking-widest bg-transparent border border-brand-emerald text-brand-emerald hover:bg-brand-emerald hover:text-black transition-all duration-300 group shadow-[0_0_15px_rgba(16,185,129,0.15)] hover:shadow-[0_0_25px_rgba(16,185,129,0.4)]"
-            >
-              <span>Collaborer</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          )}
+          <Link
+            id="nav-cta-btn"
+            to="/contact"
+            onClick={() => setIsOpen(false)}
+            className="hidden lg:flex items-center space-x-2 px-6 py-2.5 rounded-none text-xs font-mono uppercase tracking-widest bg-transparent border border-brand-emerald text-brand-emerald hover:bg-brand-emerald hover:text-black transition-all duration-300 group shadow-[0_0_15px_rgba(16,185,129,0.15)] hover:shadow-[0_0_25px_rgba(16,185,129,0.4)]"
+          >
+            <span>Collaborer</span>
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </Link>
 
           <button
             id="mobile-menu-toggle"
@@ -300,28 +286,15 @@ export default function Navbar() {
         </div>
 
         <div className="border-t border-white/10 pt-6 mt-6">
-          {isHome ? (
-            <a
-              id="mobile-nav-cta"
-              href="#contact"
-              onClick={(e) => handleScrollTo(e, 'contact')}
-              className="w-full py-4 rounded-none font-mono text-xs uppercase tracking-widest bg-brand-emerald text-black text-center flex items-center justify-center space-x-2 shadow-lg hover:bg-brand-emerald/90 transition-all"
-            >
-              <span>Travailler ensemble</span>
-              <Sparkles className="w-4 h-4 text-black animate-pulse" />
-            </a>
-          ) : (
-            <Link
-              id="mobile-nav-cta"
-              to="/"
-              hash="contact"
-              onClick={() => setIsOpen(false)}
-              className="w-full py-4 rounded-none font-mono text-xs uppercase tracking-widest bg-brand-emerald text-black text-center flex items-center justify-center space-x-2 shadow-lg hover:bg-brand-emerald/90 transition-all"
-            >
-              <span>Travailler ensemble</span>
-              <Sparkles className="w-4 h-4 text-black animate-pulse" />
-            </Link>
-          )}
+          <Link
+            id="mobile-nav-cta"
+            to="/contact"
+            onClick={() => setIsOpen(false)}
+            className="w-full py-4 rounded-none font-mono text-xs uppercase tracking-widest bg-brand-emerald text-black text-center flex items-center justify-center space-x-2 shadow-lg hover:bg-brand-emerald/90 transition-all"
+          >
+            <span>Travailler ensemble</span>
+            <Sparkles className="w-4 h-4 text-black animate-pulse" />
+          </Link>
         </div>
       </div>
 

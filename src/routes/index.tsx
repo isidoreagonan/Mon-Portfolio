@@ -5,8 +5,6 @@ import ServicesSection from "@/components/portfolio/ServicesSection";
 import ProjectsSection from "@/components/portfolio/ProjectsSection";
 
 import InteractiveAudit from "@/components/portfolio/InteractiveAudit";
-import ContactSection from "@/components/portfolio/ContactSection";
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -40,7 +38,6 @@ function HomePage() {
         
         <InteractiveAudit />
       </main>
-      <ContactSection />
     </div>
   );
 }
