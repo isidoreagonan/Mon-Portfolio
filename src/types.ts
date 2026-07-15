@@ -8,6 +8,7 @@ export interface Project {
   metrics?: string;
   linkText?: string;
   linkUrl?: string;
+  role?: string;
   mediaType: 'image' | 'video' | 'interactive';
   image?: string;
   placeholderColor: string;

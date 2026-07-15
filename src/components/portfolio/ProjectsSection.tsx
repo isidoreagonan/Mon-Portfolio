@@ -14,9 +14,9 @@ export default function ProjectsSection() {
 
   const getCategoryLabel = (category: string) => {
     switch (category) {
-      case 'saas': return 'SaaS Platform';
+      case 'saas': return 'Plateforme SaaS';
       case 'ugc': return 'Vidéo UGC';
-      case 'automation': return 'Automatisation';
+      case 'automation': return 'YouTube & Automatisation';
       default: return 'Tech Projets';
     }
   };
@@ -64,7 +64,7 @@ export default function ProjectsSection() {
               { id: 'all', label: 'Tous' },
               { id: 'saas', label: 'Plateformes SaaS' },
               { id: 'ugc', label: 'UGC & Médias' },
-              { id: 'automation', label: 'Automatisation' },
+              { id: 'automation', label: 'YouTube & Automatisation' },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -88,169 +88,91 @@ export default function ProjectsSection() {
             <div
               key={project.id}
               id={`project-card-${project.id}`}
-              className="group bg-neutral-900/40 rounded-none overflow-hidden border border-neutral-850 hover:border-brand-emerald/50 transition-all duration-300 flex flex-col justify-between"
+              className="group bg-neutral-900/40 rounded-none border border-neutral-850 hover:border-brand-emerald/50 hover:bg-neutral-900/70 transition-all duration-300 p-8 flex flex-col justify-between relative overflow-hidden"
             >
-              {/* Custom Mockup Preview */}
-              <div
-                className="relative h-64 w-full flex items-center justify-center overflow-hidden border-b border-neutral-850 group-hover:opacity-95 transition-opacity"
-                style={{ background: project.placeholderColor }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent z-10" />
+              {/* Subtle top accent gradient line on hover */}
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-emerald/0 to-transparent group-hover:via-brand-emerald transition-all duration-500" />
 
-                {/* Real screenshot when provided */}
-                {project.image && (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                )}
-
-                {/* SaaS Laptop-style layout */}
-                {!project.image && project.category === 'saas' && (
-                  <div className="w-[85%] h-[80%] rounded-none bg-zinc-950 border border-neutral-800 p-2.5 flex flex-col shadow-2xl relative translate-y-4 group-hover:translate-y-2 transition-transform duration-500">
-                    {/* Browser top-bar */}
-                    <div className="flex items-center justify-between mb-2 pb-1.5 border-b border-white/5">
-                      <div className="flex space-x-1.5">
-                        <span className="w-2 h-2 rounded-none bg-red-550" />
-                        <span className="w-2 h-2 rounded-none bg-yellow-550" />
-                        <span className="w-2 h-2 rounded-none bg-green-550" />
-                      </div>
-                      <div className="w-1/2 h-4 rounded-none bg-white/5 text-[8px] flex items-center justify-center font-mono text-zinc-500 truncate">
-                        https://{project.id === 'technova' ? 'technova-learning.com' : 'ducatilio.com'}
-                      </div>
-                      <div className="w-4" />
-                    </div>
-                    {/* Browser inner mockup content */}
-                    <div className="flex-1 bg-zinc-900 rounded-none p-2 flex flex-col justify-between overflow-hidden relative">
-                      <div className="flex justify-between items-center border-b border-white/5 pb-1">
-                        <span className="text-[10px] font-display font-bold text-white uppercase">{project.title}</span>
-                        <span className="text-[8px] text-brand-cyan bg-brand-cyan/10 px-1 rounded-none">PRO</span>
-                      </div>
-                      <div className="grid grid-cols-3 gap-1.5 my-1 flex-1">
-                        <div className="bg-white/5 rounded-none p-1 flex flex-col justify-between">
-                          <span className="text-[6px] text-zinc-500 uppercase">Users</span>
-                          <span className="text-[10px] font-bold font-mono text-brand-emerald">1.2k</span>
-                        </div>
-                        <div className="bg-white/5 rounded-none p-1 flex flex-col justify-between">
-                          <span className="text-[6px] text-zinc-500 uppercase">SaaS MRR</span>
-                          <span className="text-[10px] font-bold font-mono text-brand-cyan">€4,500</span>
-                        </div>
-                        <div className="bg-white/5 rounded-none p-1 flex flex-col justify-between">
-                          <span className="text-[6px] text-zinc-500 uppercase">Conversion</span>
-                          <span className="text-[10px] font-bold font-mono text-purple-400">8.4%</span>
-                        </div>
-                      </div>
-                      <div className="h-6 w-full rounded-none bg-brand-emerald/10 border border-brand-emerald/20 flex items-center justify-center">
-                        <span className="text-[8px] text-brand-emerald font-bold font-mono uppercase tracking-widest">SYSTEM ONLINE</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* UGC Mobile Phone mockup */}
-                {project.category === 'ugc' && (
-                  <div className="w-[120px] h-[90%] rounded-none bg-zinc-950 border border-neutral-800 p-2 flex flex-col shadow-2xl relative translate-y-6 group-hover:translate-y-4 transition-transform duration-500 overflow-hidden">
-                    {/* Phone lens notch */}
-                    <div className="w-12 h-3 bg-black rounded-none mx-auto absolute top-0 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                      <span className="w-1 h-1 bg-blue-900" />
-                    </div>
-                    {/* Video Player */}
-                    <div className="flex-1 rounded-none bg-zinc-900 border border-white/5 overflow-hidden relative flex items-center justify-center">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
-                      
-                      {/* Abstract video simulation layout */}
-                      <div className="absolute inset-x-2 bottom-2 z-20 flex flex-col text-left">
-                        <span className="text-[8px] font-bold text-white">@isidore_ugc</span>
-                        <span className="text-[6px] text-zinc-300 font-light truncate">Faire un hook d'enfer avec CapCut</span>
-                        <div className="flex items-center space-x-1 mt-1">
-                          <span className="text-[6px] text-brand-emerald bg-brand-emerald/10 px-1 rounded-none">Conversion</span>
-                          <span className="text-[5px] text-zinc-400">Viral Hook</span>
-                        </div>
-                      </div>
-
-                      {/* Video interaction UI (likes, comments, shares simulated) */}
-                      <div className="absolute right-1 top-10 z-20 flex flex-col space-y-2 text-right">
-                        <div className="flex flex-col items-center">
-                          <span className="w-3.5 h-3.5 rounded-none bg-white/10 flex items-center justify-center text-[5px] text-red-500">❤️</span>
-                          <span className="text-[5px] text-white">45k</span>
-                        </div>
-                        <div className="flex flex-col items-center">
-                          <span className="w-3.5 h-3.5 rounded-none bg-white/10 flex items-center justify-center text-[5px]">💬</span>
-                          <span className="text-[5px] text-white">820</span>
-                        </div>
-                      </div>
-
-                      <div className="w-8 h-8 rounded-none bg-brand-emerald/20 border border-brand-emerald flex items-center justify-center z-15 group-hover:scale-110 transition-transform">
-                        <Play className="w-3.5 h-3.5 text-brand-emerald fill-brand-emerald" />
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Automation layout */}
-                {!project.image && project.category === 'automation' && (
-                  <div className="w-[85%] h-[80%] rounded-none bg-zinc-950 border border-zinc-800 p-3.5 flex flex-col shadow-2xl relative translate-y-4 group-hover:translate-y-2 transition-transform duration-500 font-mono text-[9px]">
-                    <div className="flex items-center space-x-1.5 text-zinc-500 border-b border-white/5 pb-1.5 mb-2">
-                      <Cpu className="w-3.5 h-3.5 text-brand-emerald" />
-                      <span className="text-zinc-400">YT_AUTO_BOT_PROCESSOR.py</span>
-                    </div>
-                    <div className="flex-1 space-y-1.5 overflow-hidden text-zinc-400">
-                      <div className="text-zinc-600">&gt; initialising niche database...</div>
-                      <div className="text-brand-cyan">&gt; API connection status: 200 OK</div>
-                      <div className="text-brand-emerald">&gt; [MODEL] AI script text generated: "Le secret du business digital..."</div>
-                      <div className="text-zinc-400">&gt; [CAPCUT] rendering video compilation automatically...</div>
-                      <div className="text-purple-400 animate-pulse">&gt; UPLOADING TO SCHEDULER: 100% complete</div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Badge Category overlay */}
-                <span className={`absolute top-4 left-4 z-20 px-2.5 py-1 rounded-none text-[10px] font-black uppercase tracking-widest border ${getCategoryColor(project.category)}`}>
-                  {getCategoryLabel(project.category)}
-                </span>
-
-                {/* Impact metric badge overlay */}
-                {project.metrics && (
-                  <span className="absolute bottom-4 right-4 z-20 px-3 py-1 rounded-none text-xs font-mono font-bold bg-zinc-950/95 text-white border border-neutral-800 flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-brand-emerald" /> {project.metrics}
+              <div>
+                {/* Header: Category Badge + Metrics Badge */}
+                <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+                  <span className={`px-3 py-1 text-xs font-mono font-bold uppercase tracking-widest border ${getCategoryColor(project.category)}`}>
+                    {getCategoryLabel(project.category)}
                   </span>
-                )}
-              </div>
 
-              {/* Card Body Info */}
-              <div className="p-8 flex flex-col justify-between flex-1">
-                <div>
+                  {project.metrics && (
+                    <span className="px-3 py-1 text-xs font-mono font-semibold bg-zinc-950 text-white border border-neutral-800 flex items-center gap-1.5 shadow-sm group-hover:border-brand-emerald/30 transition-colors">
+                      <Sparkles className="w-3.5 h-3.5 text-brand-emerald animate-pulse" /> {project.metrics}
+                    </span>
+                  )}
+                </div>
+
+                {/* Title & Role */}
+                <div className="mb-4">
                   <h3
                     id={`project-title-${project.id}`}
-                    className="text-2xl font-display font-bold text-white mb-2.5 tracking-tight group-hover:text-brand-emerald transition-colors"
+                    className="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight group-hover:text-brand-emerald transition-colors leading-snug"
                   >
                     {project.title}
                   </h3>
-                  
-                  <p className="text-neutral-400 font-sans font-light text-sm leading-relaxed mb-6">
-                    {project.description}
-                  </p>
+                  {project.role && (
+                    <p className="text-brand-cyan font-mono text-xs mt-1.5 font-medium flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 bg-brand-cyan inline-block rounded-full" />
+                      <span>{project.role}</span>
+                    </p>
+                  )}
+                </div>
+                
+                {/* Description */}
+                <p className="text-neutral-300 font-sans font-light text-sm sm:text-base leading-relaxed mb-6">
+                  {project.description}
+                </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, i) => (
-                      <span key={i} className="flex items-center gap-1 px-2.5 py-1 rounded-none bg-white/5 border border-white/5 text-[10px] text-zinc-400 font-mono uppercase tracking-wider">
-                        <Tag className="w-2.5 h-2.5 text-zinc-500" /> {tag}
-                      </span>
+                {/* Key Features preview bullet points */}
+                {project.features && project.features.length > 0 && (
+                  <div className="mb-6 space-y-2 bg-neutral-950/50 p-4 border border-white/5">
+                    {project.features.slice(0, 2).map((feat, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-xs text-zinc-400 font-mono">
+                        <Check className="w-3.5 h-3.5 text-brand-emerald mt-0.5 flex-shrink-0" />
+                        <span className="line-clamp-1">{feat}</span>
+                      </div>
                     ))}
                   </div>
-                </div>
+                )}
 
-                {/* Actions */}
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {project.tags.map((tag, i) => (
+                    <span key={i} className="flex items-center gap-1 px-2.5 py-1 bg-white/5 border border-white/5 text-[10px] text-zinc-400 font-mono uppercase tracking-wider group-hover:border-white/10 transition-colors">
+                      <Tag className="w-2.5 h-2.5 text-zinc-500" /> {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="pt-6 border-t border-neutral-850 flex flex-col sm:flex-row gap-3">
                 <button
                   id={`project-action-details-${project.id}`}
                   onClick={() => setSelectedProject(project)}
-                  className="w-full py-3.5 rounded-none text-center text-xs font-mono uppercase tracking-widest bg-neutral-900 border border-neutral-800 text-white hover:bg-neutral-850 hover:border-brand-emerald/50 transition-all flex items-center justify-center gap-2 group cursor-pointer"
+                  className="flex-1 py-3.5 px-4 text-center text-xs font-mono uppercase tracking-widest bg-neutral-900 border border-neutral-800 text-white hover:bg-brand-emerald hover:text-black hover:border-brand-emerald transition-all flex items-center justify-center gap-2 group/btn cursor-pointer font-bold"
                 >
-                  <FileText className="w-4 h-4 text-zinc-400 group-hover:text-brand-emerald" />
+                  <FileText className="w-4 h-4 text-zinc-400 group-hover/btn:text-black transition-colors" />
                   <span>En savoir plus &amp; Démo</span>
                 </button>
+
+                {project.linkUrl && (
+                  <a
+                    id={`project-action-link-${project.id}`}
+                    href={project.linkUrl}
+                    target={project.linkUrl.startsWith('http') ? '_blank' : '_self'}
+                    rel={project.linkUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="py-3.5 px-5 text-center text-xs font-mono uppercase tracking-widest bg-white/5 border border-white/10 text-brand-cyan hover:bg-brand-cyan hover:text-black hover:border-brand-cyan transition-all flex items-center justify-center gap-2 cursor-pointer font-bold"
+                  >
+                    <span>{project.linkText || 'Visiter le site'}</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -283,14 +205,21 @@ export default function ProjectsSection() {
 
             {/* Header info */}
             <div className="mb-8">
-              <span className={`inline-block px-3 py-1 rounded-none text-xs font-mono font-bold border mb-4 ${getCategoryColor(selectedProject.category)}`}>
-                {getCategoryLabel(selectedProject.category)}
-              </span>
+              <div className="flex items-center gap-3 mb-4">
+                <span className={`inline-block px-3 py-1 rounded-none text-xs font-mono font-bold border ${getCategoryColor(selectedProject.category)}`}>
+                  {getCategoryLabel(selectedProject.category)}
+                </span>
+                {selectedProject.role && (
+                  <span className="text-brand-cyan font-mono text-xs font-semibold px-2.5 py-1 bg-brand-cyan/10 border border-brand-cyan/20">
+                    {selectedProject.role}
+                  </span>
+                )}
+              </div>
               <h3 className="text-3xl font-display font-extrabold text-white tracking-tight">
                 {selectedProject.title}
               </h3>
               {selectedProject.metrics && (
-                <p className="text-brand-emerald font-mono text-sm font-semibold mt-1 flex items-center gap-1.5">
+                <p className="text-brand-emerald font-mono text-sm font-semibold mt-2 flex items-center gap-1.5">
                   <Sparkles className="w-4 h-4 text-brand-emerald" /> Impact : {selectedProject.metrics}
                 </p>
               )}
@@ -333,19 +262,31 @@ export default function ProjectsSection() {
               )}
             </div>
 
-            {/* Video or Live placeholder note */}
+            {/* Action link or demo placeholder */}
             <div className="mt-8 pt-6 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <span className="text-xs text-zinc-500 font-mono">
-                * Lien de démonstration complet modifiable ultérieurement.
-              </span>
+              {selectedProject.linkUrl && selectedProject.linkUrl.startsWith('http') ? (
+                <a
+                  href={selectedProject.linkUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 font-mono text-xs uppercase tracking-widest bg-white/10 text-brand-cyan border border-brand-cyan/30 hover:bg-brand-cyan hover:text-black transition-colors flex items-center gap-2 font-bold"
+                >
+                  <span>{selectedProject.linkText || 'Visiter le site en ligne'}</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              ) : (
+                <span className="text-xs text-zinc-500 font-mono">
+                  * Projet consultable en direct ou sur demande d'accès.
+                </span>
+              )}
               <a
                 id="modal-cta-whatsapp"
-                href="https://wa.me/2290157385885?text=Bonjour%20Isidore,%20j'aimerais%20en%20savoir%20plus%20sur%20votre%20projet%20"
+                href={`https://wa.me/2290157385885?text=Bonjour%20Isidore,%20j'aimerais%20en%20savoir%20plus%20sur%20${encodeURIComponent(selectedProject.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-none font-mono text-xs uppercase tracking-widest bg-brand-emerald text-black hover:bg-emerald-400 transition-colors flex items-center gap-2"
+                className="px-6 py-3 rounded-none font-mono text-xs uppercase tracking-widest bg-brand-emerald text-black hover:bg-emerald-400 transition-colors flex items-center gap-2 font-bold"
               >
-                <span>Demander une démo live</span>
+                <span>Discuter de ce projet</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
             </div>
