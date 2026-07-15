@@ -32,19 +32,19 @@ export default function Navbar() {
       setScrolled(window.scrollY > 20);
 
       if (isHome) {
-        const scrollPosition = window.scrollY + 120;
+        let currentSection = 'accueil';
         for (const link of navLinks) {
           if (link.kind === 'anchor') {
             const el = document.getElementById(link.id);
             if (el) {
-              const top = el.offsetTop;
-              const height = el.offsetHeight;
-              if (scrollPosition >= top && scrollPosition < top + height) {
-                setActiveSection(link.id);
+              const rect = el.getBoundingClientRect();
+              if (rect.top <= window.innerHeight / 3 && rect.bottom >= 100) {
+                currentSection = link.id;
               }
             }
           }
         }
+        setActiveSection(currentSection);
       }
     };
 
@@ -226,7 +226,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <div
         id="mobile-nav-drawer"
-        className={`fixed inset-y-0 right-0 w-full max-w-sm glassmorphism border-l border-white/10 z-50 p-8 flex flex-col justify-between transform transition-transform duration-500 lg:hidden rounded-none ${
+        className={`fixed inset-y-0 right-0 w-full max-w-sm bg-[#030303]/95 backdrop-blur-2xl border-l border-white/10 z-50 p-8 flex flex-col justify-between transform transition-transform duration-500 lg:hidden rounded-none ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
