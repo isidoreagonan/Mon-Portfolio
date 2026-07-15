@@ -104,11 +104,7 @@ export default function Navbar() {
     <>
     <nav
       id="main-navbar"
-      className={`fixed top-0 left-0 right-0 w-full z-[9999] transition-all duration-300 ease-in-out pointer-events-auto ${
-        scrolled
-          ? 'py-3 bg-[#030303]/90 shadow-2xl shadow-brand-emerald/10 border-b border-brand-emerald/30 backdrop-blur-2xl'
-          : 'py-4 sm:py-5 bg-[#030303]/60 shadow-lg shadow-black/50 border-b border-white/10 backdrop-blur-xl'
-      }`}
+      className="fixed top-0 left-0 right-0 w-full h-20 z-[9999] bg-[#030303]/95 backdrop-blur-2xl border-b border-neutral-800/80 shadow-xl pointer-events-auto flex items-center justify-center"
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
         {/* Logo - Complètement à gauche et clique = recharge le site */}
